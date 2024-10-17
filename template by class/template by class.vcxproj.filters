@@ -18,10 +18,7 @@
     <ClCompile Include="main.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="Base.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Child1.cpp">
+    <ClCompile Include="Child2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -30,6 +27,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Child1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Child2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

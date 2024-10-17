@@ -9,6 +9,7 @@ using namespace std;
 
 template <class T1, class T2>
 class Base{
+#pragma region manager
 private:
 
 	//class Manager {
@@ -17,7 +18,7 @@ private:
 	//	}
 	//};
 	//Manager manager;
-
+#pragma endregion manager
 protected:
 	T1 variable1;
 	T2 variable2;
@@ -28,7 +29,7 @@ protected:
 	//	array.push_back(variable2);
 	//}
 	//i understand what i can make  |
-public:							 //\|/
+public://						   \|/
 	Base(T1 var1, T2 var2);// : array{var1, var2} but if var1 its different type of var2, can use just "any". 
 	Base();                //So it's  not as interesting as make class inside other class which call when create general class
 
@@ -40,7 +41,6 @@ public:							 //\|/
 };
 
 
-
 // Constructor Definitions
 template<class T1, class T2>
 Base<T1, T2>::Base(T1 var1, T2 var2) : variable1{ var1 }, variable2{ var2 }, array{var1, var2}
@@ -48,7 +48,7 @@ Base<T1, T2>::Base(T1 var1, T2 var2) : variable1{ var1 }, variable2{ var2 }, arr
 
 template<class T1, class T2>
 Base<T1, T2>::Base() : variable1{}, variable2{} {}
-
+#pragma region destructor1
 //template<class T1, class T2>
 //Base<T1, T2>::~Base() {
 //	string result = "\nwas deleted: ";
@@ -87,6 +87,7 @@ Base<T1, T2>::Base() : variable1{}, variable2{} {}
 //	cout << result;
 //
 //}
+#pragma endregion destructor1
 
 template<class T1, class T2>
 inline void Base<T1, T2>::print_all() {
@@ -118,5 +119,5 @@ inline void Base<T1, T2>::print_all() {
 		}
 	}
 	//cpu /*what is that?*/
-	cout << result;
+	cout << '\n' << result;
 }
