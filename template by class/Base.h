@@ -93,28 +93,28 @@ template<class T1, class T2>
 inline void Base<T1, T2>::print_all() {
 	string result;
 	for (int i = 0; i < array.size(); i++) {
-		if (array[i].type() == typeid(int)) {
+		if (array[i].has_value() && array[i].type() == typeid(int)) {
 			result.append(to_string(any_cast<int>(array[i])) + " ");
 		}
-		else if (array[i].type() == typeid(short)) {
+		else if (array[i].has_value() && array[i].type() == typeid(short)) {
 			result.append(to_string(any_cast<short>(array[i])) + " ");
 		}
-		else if (array[i].type() == typeid(double)) {
+		else if (array[i].has_value() && array[i].type() == typeid(double)) {
 			result.append(to_string(any_cast<double>(array[i])) + " ");
 		}
-		else if (array[i].type() == typeid(float)) {
+		else if (array[i].has_value() && array[i].type() == typeid(float)) {
 			result.append(to_string(any_cast<float>(array[i])) + " ");
 		}
-		else if (array[i].type() == typeid(bool)) {
+		else if (array[i].has_value() && array[i].type() == typeid(bool)) {
 			result.append((any_cast<bool>(array[i]) ? "true" : "false") + string(" "));
 		}
-		else if (array[i].type() == typeid(const char*)) {
+		else if (array[i].has_value() && array[i].type() == typeid(const char*)) {
 			result.append(any_cast<const char*>(array[i]) + string(" "));
 		}
-		else if (array[i].type() == typeid(char*)) {
+		else if (array[i].has_value() && array[i].type() == typeid(char*)) {
 			result.append(any_cast<char*>(array[i]) + string(" "));
 		}
-		else if (array[i].type() == typeid(string)) {
+		else if (array[i].has_value() && array[i].type() == typeid(string)) {
 			result.append(any_cast<string>(array[i]) + " ");
 		}
 	}
