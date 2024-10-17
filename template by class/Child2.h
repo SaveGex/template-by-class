@@ -7,7 +7,7 @@
 using namespace std;
 
 template<class T1, class T2, class T3, class T4, class T5, class T6>
-class Child2 : private Child1<T3, T4>{
+class Child2 : private Child1<T1, T2, T3, T4>{
 private:
 
 public:
